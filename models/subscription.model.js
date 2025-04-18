@@ -1,4 +1,4 @@
-import mongoose from 'moongose';
+import mongoose from 'mongoose';
 
 const subscriptionSchema = new mongoose.Schema ({
     name: {
@@ -59,6 +59,9 @@ const subscriptionSchema = new mongoose.Schema ({
         ref: 'User',
         required: true,
         index: true,
+    },
+    workflowId: {  // Added the workflowId field
+        type: String
     }
 }, { timestamps: true});
 
